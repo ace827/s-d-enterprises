@@ -1,0 +1,2018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S & D & T Enterprises, INC. — Handcrafted Display Cases | Manchester, Ohio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --walnut:    #1a1008;
+  --walnut2:   #261808;
+  --walnut3:   #3a2410;
+  --gold:      #b8860b;
+  --gold2:     #d4a017;
+  --gold3:     #e8b835;
+  --cream:     #faf6ef;
+  --warm:      #f2ead8;
+  --border:    #ddd0b3;
+  --mid:       #8a7a5c;
+  --dark:      #4a3820;
+  --card:      #f7f2e8;
+  --white:     #ffffff;
+  --shadow:    rgba(26,16,8,0.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--walnut);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── SVG SPRITE ─────────────────────────────────────── */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* ── TOPBAR ─────────────────────────────────────────── */
+.topbar {
+  background: var(--walnut);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--walnut3);
+}
+.topbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.topbar-left { display: flex; align-items: center; gap: 1.5rem; }
+.topbar-item { display: flex; align-items: center; gap: 0.4rem; }
+.topbar-item svg { color: var(--gold2); flex-shrink: 0; }
+.topbar-right a {
+  background: var(--gold);
+  color: var(--walnut);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 14px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.topbar-right a:hover { background: var(--gold3); }
+
+/* ── NAV ────────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--walnut2);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 2px 20px var(--shadow);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 2rem;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-logo-mark {
+  width: 42px;
+  height: 42px;
+  background: var(--gold);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--walnut);
+  flex-shrink: 0;
+}
+.nav-logo-text { line-height: 1.2; }
+.nav-logo-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--white);
+  display: block;
+}
+.nav-logo-city {
+  font-size: 0.68rem;
+  color: var(--gold2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 6px 12px;
+  border-radius: 3px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--gold3); background: rgba(255,255,255,0.06); }
+.nav-cta {
+  background: var(--gold);
+  color: var(--walnut) !important;
+  font-weight: 700 !important;
+  padding: 8px 18px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+}
+.nav-cta:hover { background: var(--gold3) !important; color: var(--walnut) !important; }
+
+/* ── HERO ───────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('http://www.s-denterprises.com/image/101709943.png');
+  background-size: cover;
+  background-position: center 30%;
+  z-index: 0;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(26,16,8,0.92) 0%, rgba(26,16,8,0.78) 50%, rgba(26,16,8,0.45) 100%);
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(184,134,11,0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold3);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+.hero-eyebrow svg { width: 12px; height: 12px; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold3);
+}
+.hero-sub {
+  color: rgba(255,255,255,0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: var(--walnut);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--gold3); transform: translateY(-1px); }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: 3px;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover { border-color: var(--gold); background: rgba(184,134,11,0.1); }
+
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(184,134,11,0.35);
+  border-radius: 6px;
+  padding: 2rem;
+}
+.hero-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold3);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+.hero-card-items { list-style: none; }
+.hero-card-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero-card-items li:last-child { border-bottom: none; }
+.hero-card-items li svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.hero-card-contact {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(184,134,11,0.3);
+}
+.hero-card-phone {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.hero-card-email {
+  font-size: 0.8rem;
+  color: var(--gold2);
+  text-decoration: none;
+}
+.hero-card-email:hover { color: var(--gold3); }
+
+/* ── HERITAGE BAND ──────────────────────────────────── */
+.heritage-band {
+  background: var(--gold);
+  padding: 1.25rem 0;
+}
+.heritage-band-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.heritage-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.heritage-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--walnut);
+  line-height: 1;
+}
+.heritage-stat-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(26,16,8,0.72);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.heritage-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(26,16,8,0.2);
+}
+
+/* ── SECTION BASE ───────────────────────────────────── */
+section { padding: 5rem 0; }
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--walnut);
+  margin-bottom: 1rem;
+}
+.section-title-light { color: var(--white); }
+.section-sub {
+  font-size: 1rem;
+  color: var(--mid);
+  max-width: 560px;
+  line-height: 1.7;
+}
+.section-header { margin-bottom: 3rem; }
+.section-header-centered { text-align: center; }
+.section-header-centered .section-sub { margin: 0 auto; }
+
+/* ── PRODUCTS ───────────────────────────────────────── */
+#products { background: var(--cream); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 12px rgba(26,16,8,0.06);
+}
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(26,16,8,0.14);
+  transform: translateY(-3px);
+}
+.product-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: var(--warm);
+}
+.product-card-body { padding: 1.5rem; }
+.product-card-tag {
+  display: inline-block;
+  background: rgba(184,134,11,0.1);
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 0.6rem;
+}
+.product-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--walnut);
+  margin-bottom: 0.5rem;
+}
+.product-card p {
+  font-size: 0.87rem;
+  color: var(--mid);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.product-card-features {
+  list-style: none;
+  margin-bottom: 1.25rem;
+}
+.product-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--dark);
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+.product-card-features li svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.product-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: gap 0.2s;
+}
+.product-card-link:hover { gap: 0.6rem; }
+.product-card-link svg { transition: transform 0.2s; }
+.product-card-link:hover svg { transform: translateX(3px); }
+
+/* ── ABOUT ──────────────────────────────────────────── */
+#about { background: var(--warm); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.about-images {
+  position: relative;
+}
+.about-img-main {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 12px 40px rgba(26,16,8,0.2);
+  display: block;
+  object-fit: cover;
+  height: 420px;
+}
+.about-img-accent {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 4px solid var(--white);
+  box-shadow: 0 6px 24px rgba(26,16,8,0.2);
+}
+.about-badge {
+  position: absolute;
+  top: 24px;
+  left: -18px;
+  background: var(--gold);
+  color: var(--walnut);
+  padding: 14px 18px;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(26,16,8,0.2);
+}
+.about-badge-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+}
+.about-badge-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  display: block;
+  margin-top: 2px;
+}
+.about-content { padding-right: 1rem; }
+.about-points { list-style: none; margin: 1.5rem 0 2rem; }
+.about-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--dark);
+  margin-bottom: 0.85rem;
+}
+.about-points li .icon-wrap {
+  width: 24px;
+  height: 24px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.about-points li .icon-wrap svg { color: var(--walnut); }
+
+/* ── DIVISIONS ──────────────────────────────────────── */
+#divisions {
+  background: var(--walnut);
+  position: relative;
+  overflow: hidden;
+}
+#divisions::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(184,134,11,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.divisions-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+.divisions-intro-content .section-sub { color: rgba(255,255,255,0.65); max-width: 480px; }
+.divisions-intro-quote {
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 2rem;
+  border-radius: 0 4px 4px 0;
+}
+.divisions-intro-quote blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+.divisions-intro-quote cite {
+  font-size: 0.78rem;
+  color: var(--gold2);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.division-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 6px;
+  padding: 2rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+.division-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(184,134,11,0.5);
+}
+.division-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(184,134,11,0.15);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--gold3);
+}
+.division-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+.division-card-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: 0.75rem;
+}
+.division-card p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.65;
+}
+
+/* ── PRODUCT GALLERY ────────────────────────────────── */
+#gallery { background: var(--cream); }
+.gallery-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+  overflow-x: auto;
+}
+.gallery-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--mid);
+  padding: 10px 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.gallery-tab.active, .gallery-tab:hover { color: var(--gold); border-bottom-color: var(--gold); }
+.gallery-panel { display: none; }
+.gallery-panel.active { display: block; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--warm);
+  box-shadow: 0 2px 8px rgba(26,16,8,0.08);
+  aspect-ratio: 4/3;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+
+/* ── CRAFTSMANSHIP ──────────────────────────────────── */
+#craftsmanship {
+  background: var(--walnut2);
+}
+.craft-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.craft-item { text-align: center; }
+.craft-icon-wrap {
+  width: 72px;
+  height: 72px;
+  background: rgba(184,134,11,0.12);
+  border: 1px solid rgba(184,134,11,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: var(--gold3);
+  transition: background 0.3s;
+}
+.craft-item:hover .craft-icon-wrap { background: rgba(184,134,11,0.22); }
+.craft-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.craft-item p {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+}
+
+/* ── ORDERING / HOW IT WORKS ────────────────────────── */
+#ordering { background: var(--warm); }
+.ordering-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+.ordering-grid::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(12.5% + 18px);
+  right: calc(12.5% + 18px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), rgba(184,134,11,0.3));
+}
+.ordering-step { text-align: center; position: relative; }
+.step-num {
+  width: 56px;
+  height: 56px;
+  background: var(--walnut);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold3);
+  position: relative;
+  z-index: 1;
+}
+.ordering-step h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--walnut);
+  margin-bottom: 0.5rem;
+}
+.ordering-step p {
+  font-size: 0.84rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* ── CUSTOM ORDERS ──────────────────────────────────── */
+#custom {
+  background: var(--cream);
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.custom-content .section-sub { margin-bottom: 2rem; }
+.custom-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.custom-option {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.custom-option svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.custom-option-label {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--walnut);
+  margin-bottom: 0.15rem;
+}
+.custom-option-note {
+  font-size: 0.75rem;
+  color: var(--mid);
+  line-height: 1.4;
+}
+.custom-image-stack { position: relative; padding: 1.5rem 1.5rem 1.5rem 0; }
+.custom-img-a {
+  width: 85%;
+  border-radius: 6px;
+  box-shadow: 0 12px 36px rgba(26,16,8,0.15);
+  display: block;
+  object-fit: cover;
+  height: 360px;
+}
+.custom-img-b {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 3px solid var(--white);
+  box-shadow: 0 6px 20px rgba(26,16,8,0.15);
+}
+.custom-img-c {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 42%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 16px rgba(26,16,8,0.12);
+}
+
+/* ── FAQ ────────────────────────────────────────────── */
+#faq { background: var(--warm); }
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--walnut);
+  user-select: none;
+  list-style: none;
+  transition: background 0.2s;
+}
+.faq-question:hover { background: var(--cream); }
+.faq-question svg {
+  flex-shrink: 0;
+  color: var(--gold);
+  transition: transform 0.3s;
+}
+.faq-item.open .faq-question { background: var(--cream); }
+.faq-item.open .faq-question svg { transform: rotate(180deg); }
+.faq-answer {
+  display: none;
+  padding: 0 1.4rem 1.1rem;
+  font-size: 0.87rem;
+  color: var(--mid);
+  line-height: 1.7;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+.faq-item.open .faq-answer { display: block; }
+
+/* ── CTA BAND ───────────────────────────────────────── */
+.cta-band {
+  background: var(--gold);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.cta-band h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--walnut);
+  margin-bottom: 0.5rem;
+}
+.cta-band p {
+  color: rgba(26,16,8,0.7);
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+}
+.cta-band-phone {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--walnut);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.2s;
+}
+.cta-band-phone:hover { opacity: 0.75; }
+.cta-band-email {
+  font-size: 0.9rem;
+  color: rgba(26,16,8,0.7);
+  text-decoration: none;
+}
+.cta-band-email:hover { color: var(--walnut); }
+
+/* ── CONTACT ────────────────────────────────────────── */
+#contact { background: var(--walnut); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contact-info .section-sub { color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
+.contact-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.25rem;
+}
+.contact-detail-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(184,134,11,0.15);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold3);
+}
+.contact-detail-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: 0.15rem;
+}
+.contact-detail-value {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.5;
+}
+.contact-detail-value a { color: rgba(255,255,255,0.88); text-decoration: none; }
+.contact-detail-value a:hover { color: var(--gold3); }
+.hours-table { margin-top: 1.5rem; }
+.hours-table-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: 0.75rem;
+}
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.75);
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hours-row:last-child { border-bottom: none; }
+.hours-row strong { color: rgba(255,255,255,0.92); }
+
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 6px;
+  padding: 2.5rem;
+}
+.contact-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.75rem;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { margin-bottom: 1.1rem; }
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: 0.4rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: var(--white);
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--gold); }
+.form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23b8860b' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+.form-group select option { background: var(--walnut3); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--walnut);
+  border: none;
+  border-radius: 3px;
+  padding: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--gold3); }
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer {
+  background: var(--walnut);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 4rem 0 2rem;
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand {}
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+.footer-brand-mark {
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--walnut);
+}
+.footer-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+.footer-tagline {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 280px;
+}
+.footer-contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.35rem;
+}
+.footer-contact-line svg { color: var(--gold2); flex-shrink: 0; }
+.footer-contact-line a { color: rgba(255,255,255,0.55); text-decoration: none; }
+.footer-contact-line a:hover { color: var(--gold3); }
+
+.footer-col h4 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold2);
+  margin-bottom: 1.1rem;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 0.5rem; }
+.footer-links a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--gold3); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+}
+.footer-made {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.footer-made svg { color: var(--gold); }
+
+/* ── SCROLL REVEAL ──────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.rl   { opacity: 0; transform: translateX(-28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.rr   { opacity: 0; transform: translateX(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.in   { opacity: 1 !important; transform: none !important; }
+.d1   { transition-delay: 0.1s; }
+.d2   { transition-delay: 0.2s; }
+.d3   { transition-delay: 0.3s; }
+.d4   { transition-delay: 0.4s; }
+.d5   { transition-delay: 0.5s; }
+.d6   { transition-delay: 0.6s; }
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-grid, .custom-grid, .contact-grid, .divisions-intro { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-img-accent, .about-badge { display: none; }
+  .about-img-main { height: 320px; }
+  .craft-grid, .ordering-grid { grid-template-columns: repeat(2, 1fr); }
+  .ordering-grid::before { display: none; }
+  .divisions-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .topbar-left { flex-wrap: wrap; gap: 0.75rem; }
+  nav .nav-links { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .craft-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .heritage-band-inner { justify-content: flex-start; gap: 1.5rem; }
+  .heritage-divider { display: none; }
+  .custom-options { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 20.54"/><path d="M3.82 20.54c-.47-2.2-.42-4.15.26-5.88M3.82 20.54l1.88-.98"/><path d="M15 21C10 16 8 12 6 10 4 8 4 8 4 8c1 1 3 3 5 5 2 2 4 4 6 4z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-usa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M19 3l.75 2.25L22 6l-2.25.75L19 9l-.75-2.25L16 6l2.25-.75L19 3z"/></symbol>
+  <symbol id="i-fax" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 22 21 2 21 2 17"/><polyline points="2 10 2 3 16 3 22 9 22 10"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="7" y1="15" x2="17" y2="15"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+</svg>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-item">
+        <svg width="13" height="13"><use href="#i-phone"/></svg>
+        (937) 549-3902
+      </span>
+      <span class="topbar-item">
+        <svg width="13" height="13"><use href="#i-pin"/></svg>
+        20 E 7th Street, Manchester, OH 45144
+      </span>
+      <span class="topbar-item">
+        <svg width="13" height="13"><use href="#i-mail"/></svg>
+        sales@s-denterprises.com
+      </span>
+    </div>
+    <div class="topbar-right">
+      <a href="#contact">Request a Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">S&D</div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">S & D & T Enterprises</span>
+        <span class="nav-logo-city">Manchester, Ohio · Est. 1970s</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#divisions">Divisions</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#custom">Custom Orders</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <svg width="12" height="12"><use href="#i-usa"/></svg>
+        Handcrafted in the USA since the early 1970s
+      </div>
+      <h1 class="reveal d1">
+        Display Cases Built to<br>
+        <em>Honor What Matters Most</em>
+      </h1>
+      <p class="hero-sub reveal d2">
+        S &amp; D &amp; T Enterprises crafts premium wooden, aluminum, and riker-type display cases from Manchester, Ohio — made with solid brass hardware, tempered glass, and genuine hardwoods. Built to protect and showcase your most cherished collectibles.
+      </p>
+      <div class="hero-buttons reveal d3">
+        <a href="#products" class="btn-primary">
+          <svg width="16" height="16"><use href="#i-box"/></svg>
+          Browse Products
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg width="16" height="16"><use href="#i-phone"/></svg>
+          Call (937) 549-3902
+        </a>
+      </div>
+    </div>
+    <div class="hero-card reveal d2">
+      <div class="hero-card-title">Why Choose S &amp; D &amp; T</div>
+      <ul class="hero-card-items">
+        <li>
+          <svg width="14" height="14"><use href="#i-check"/></svg>
+          <span>50+ years of American craftsmanship — family business since the early 1970s</span>
+        </li>
+        <li>
+          <svg width="14" height="14"><use href="#i-check"/></svg>
+          <span>Cherry, walnut &amp; oak hardwoods with hand-rubbed satin finish</span>
+        </li>
+        <li>
+          <svg width="14" height="14"><use href="#i-check"/></svg>
+          <span>Solid brass hinges, tamper-proof keyed locks, tempered safety glass</span>
+        </li>
+        <li>
+          <svg width="14" height="14"><use href="#i-check"/></svg>
+          <span>Custom non-stock sizes available — made-to-order for any need</span>
+        </li>
+        <li>
+          <svg width="14" height="14"><use href="#i-check"/></svg>
+          <span>3 specialized divisions: aluminum, chipboard &amp; fine cutlery</span>
+        </li>
+        <li>
+          <svg width="14" height="14"><use href="#i-check"/></svg>
+          <span>All products individually boxed for safe, secure shipping</span>
+        </li>
+      </ul>
+      <div class="hero-card-contact">
+        <a href="tel:9375493902" class="hero-card-phone">(937) 549-3902</a>
+        <a href="mailto:sales@s-denterprises.com" class="hero-card-email">sales@s-denterprises.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HERITAGE BAND -->
+<div class="heritage-band">
+  <div class="heritage-band-inner">
+    <div class="heritage-stat">
+      <span class="heritage-stat-num" data-count="50">0</span>
+      <span class="heritage-stat-label">Years in<br>Business</span>
+    </div>
+    <div class="heritage-divider"></div>
+    <div class="heritage-stat">
+      <span class="heritage-stat-num" data-count="3">0</span>
+      <span class="heritage-stat-label">Specialized<br>Divisions</span>
+    </div>
+    <div class="heritage-divider"></div>
+    <div class="heritage-stat">
+      <span class="heritage-stat-num">100%</span>
+      <span class="heritage-stat-label">Made in<br>the USA</span>
+    </div>
+    <div class="heritage-divider"></div>
+    <div class="heritage-stat">
+      <span class="heritage-stat-num">100%</span>
+      <span class="heritage-stat-label">Individually<br>Boxed &amp; Shipped</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-inner">
+    <div class="section-header section-header-centered reveal">
+      <span class="section-label">Our Product Lines</span>
+      <h2 class="section-title">Four Ways to Display Your Treasures</h2>
+      <p class="section-sub">Every case we make is a reflection of quality — built with the right materials, engineered for longevity, and finished to show off what's inside.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card reveal d1">
+        <img class="product-card-img" src="http://www.s-denterprises.com/image/101710479.png" alt="Wooden Display Cases" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag">Most Popular</span>
+          <h3>Wooden Display Cases</h3>
+          <p>Handcrafted from cherry, walnut, and oak with a grain-enhancing hand-rubbed satin finish. Perfect for knives, medals, coins, arrowheads, and fine collectibles.</p>
+          <ul class="product-card-features">
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Solid brass hinges &amp; clasp locks</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Rich red foam velveteen inlay (custom colors available)</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Strengthening biscuit &amp; spline corners</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Sizes from 5"×10" up to sword-length 12"×42"</li>
+          </ul>
+          <a href="#contact" class="product-card-link">Request Pricing <svg width="13" height="13"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="product-card reveal d2">
+        <img class="product-card-img" src="http://www.s-denterprises.com/image/101711804_scaled_351x246.png" alt="Aluminum Display Cases" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag">Lightweight &amp; Portable</span>
+          <h3>Aluminum Display Cases</h3>
+          <p>Anodized aluminum cases that are both lightweight for easy transport and rugged enough for shows and exhibitions. Full-length continuous hinges for lasting strength.</p>
+          <ul class="product-card-features">
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Tamper-proof keyed cylinder lock</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Tempered safety glass</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> All-riveted construction &amp; built-in support arms</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Deluxe color bottom inserts available</li>
+          </ul>
+          <a href="#contact" class="product-card-link">Request Pricing <svg width="13" height="13"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="product-card reveal d3">
+        <img class="product-card-img" src="http://www.s-denterprises.com/image/101712179_scaled_544x408.jpg" alt="Riker-Type Black Chipboards" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag">Collector Favorite</span>
+          <h3>Riker-Type Chipboards</h3>
+          <p>Glass-topped, pin-display chipboard cases with extra-heavy polyester fill. A staple for coin collectors, arrowhead enthusiasts, and militaria dealers everywhere.</p>
+          <ul class="product-card-features">
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Glass-topped lid, easily removable</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Heavy plated, non-rusting pins</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Wide range of slot inserts (10 to 72 slots)</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Available in black, blue, red, or gray</li>
+          </ul>
+          <a href="#contact" class="product-card-link">Request Pricing <svg width="13" height="13"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <div class="product-card reveal d4">
+        <img class="product-card-img" src="http://www.s-denterprises.com/image/101713358_scaled_416x251.jpg" alt="Lucite Displays & Accessories" loading="lazy">
+        <div class="product-card-body">
+          <span class="product-card-tag">Versatile Accents</span>
+          <h3>Lucite Displays &amp; Accessories</h3>
+          <p>Clear acrylic stands, risers, easels, glass domes, and specialty holders for bringing individual collectibles to life — in store windows, home displays, and offices.</p>
+          <ul class="product-card-features">
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Easels, double-bend, and label easels</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Sword, hat, rifle &amp; pistol stands</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Glass domes with wood bases</li>
+            <li><svg width="13" height="13"><use href="#i-check"/></svg> Lucite box cases with wood bases</li>
+          </ul>
+          <a href="#contact" class="product-card-link">Request Pricing <svg width="13" height="13"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-images rl">
+        <img class="about-img-main"
+          src="http://www.s-denterprises.com/image/101710844_scaled_448x289.jpg"
+          alt="S&D Enterprises display cases"
+          loading="lazy">
+        <div class="about-badge">
+          <span class="about-badge-num">50+</span>
+          <span class="about-badge-label">Years of<br>Craftsmanship</span>
+        </div>
+        <img class="about-img-accent"
+          src="http://www.s-denterprises.com/image/101710864_scaled_448x343.jpg"
+          alt="Wooden display case detail"
+          loading="lazy">
+      </div>
+      <div class="about-content rr">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">A Manchester, Ohio<br>Institution Since the 1970s</h2>
+        <p class="section-sub">What started as a small family operation has grown into a multi-division enterprise with over 32 years of industry experience. S &amp; D &amp; T Enterprises, INC. is rooted in one belief: quality display cases shouldn't be hard to find or expensive to own.</p>
+        <ul class="about-points">
+          <li>
+            <div class="icon-wrap"><svg width="11" height="11"><use href="#i-check"/></svg></div>
+            <span>All products are <strong>made in the USA</strong> using only the finest quality materials — no overseas shortcuts.</span>
+          </li>
+          <li>
+            <div class="icon-wrap"><svg width="11" height="11"><use href="#i-check"/></svg></div>
+            <span>Three specialized divisions allow us to serve every type of collector, from coin enthusiasts to knife aficionados.</span>
+          </li>
+          <li>
+            <div class="icon-wrap"><svg width="11" height="11"><use href="#i-check"/></svg></div>
+            <span>Custom, non-stock sizes are available made-to-order — if you can describe it, we can build it.</span>
+          </li>
+          <li>
+            <div class="icon-wrap"><svg width="11" height="11"><use href="#i-check"/></svg></div>
+            <span>Every order is <strong>individually boxed</strong> for protective shipment — your pieces arrive safely, every time.</span>
+          </li>
+          <li>
+            <div class="icon-wrap"><svg width="11" height="11"><use href="#i-check"/></svg></div>
+            <span>A stress-free shopping experience with direct, personal service — you deal with craftspeople, not a call center.</span>
+          </li>
+        </ul>
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16"><use href="#i-mail"/></svg>
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVISIONS -->
+<section id="divisions">
+  <div class="section-inner">
+    <div class="divisions-intro">
+      <div class="divisions-intro-content reveal">
+        <span class="section-label">Three Divisions, One Standard</span>
+        <h2 class="section-title section-title-light">Built Under One Roof,<br>Specialized for Your Need</h2>
+        <p class="section-sub">Each division of S &amp; D &amp; T Enterprises brings a distinct expertise — together they cover virtually every display case need a collector or retailer could have.</p>
+      </div>
+      <div class="divisions-intro-quote reveal d2">
+        <blockquote>"Display the beauty. Created from only the highest quality materials — strength, durability, and affordability without the stress and hassle."</blockquote>
+        <cite>— S &amp; D &amp; T Enterprises, INC., Manchester, Ohio</cite>
+      </div>
+    </div>
+    <div class="divisions-grid">
+      <div class="division-card reveal d1">
+        <div class="division-icon">
+          <svg width="28" height="28"><use href="#i-layers"/></svg>
+        </div>
+        <h3>Allstate Manufacturing Co.</h3>
+        <div class="division-card-sub">Aluminum Anodized Display Cases</div>
+        <p>Specializing in premium aluminum anodized display cases — lightweight enough to travel with, durable enough to last decades. Ideal for gun shows, knife shows, coin dealers, and collectors on the go.</p>
+      </div>
+      <div class="division-card reveal d2">
+        <div class="division-icon">
+          <svg width="28" height="28"><use href="#i-box"/></svg>
+        </div>
+        <h3>Ruddles Mills Products</h3>
+        <div class="division-card-sub">Chipboard &amp; Riker-Type Displays</div>
+        <p>A go-to source for riker-type black chipboard display cases with glass tops and interchangeable insert systems. Trusted by coin collectors, militaria dealers, and arrowhead enthusiasts for generations.</p>
+      </div>
+      <div class="division-card reveal d3">
+        <div class="division-icon">
+          <svg width="28" height="28"><use href="#i-sparkle"/></svg>
+        </div>
+        <h3>Blue Grass Cutlery</h3>
+        <div class="division-card-sub">Winchester &amp; John Primble Knives</div>
+        <p>Specializing in authentic Winchester Trademark knives and John Primble knives — a collector's dream. Pairing exceptional American cutlery with display cases built to show them off at their finest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Product Gallery</span>
+      <h2 class="section-title">See the Craftsmanship Up Close</h2>
+      <p class="section-sub">Real photos from our actual product lines — built and photographed right here in Manchester, Ohio.</p>
+    </div>
+    <div class="gallery-tabs">
+      <button class="gallery-tab active" data-panel="all">All Products</button>
+      <button class="gallery-tab" data-panel="wood">Wooden Cases</button>
+      <button class="gallery-tab" data-panel="aluminum">Aluminum Cases</button>
+      <button class="gallery-tab" data-panel="riker">Riker Chipboards</button>
+      <button class="gallery-tab" data-panel="lucite">Lucite &amp; Accessories</button>
+    </div>
+
+    <div class="gallery-panel active" id="panel-all">
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710579_scaled_339x240.jpg" alt="Wooden display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710844_scaled_448x289.jpg" alt="Wooden display case open" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710864_scaled_448x343.jpg" alt="Walnut display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710966.jpg" alt="Cherry display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711005_scaled_480x360.jpg" alt="Display case with items" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711162.jpg" alt="Large display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711804_scaled_351x246.png" alt="Aluminum display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712179_scaled_544x408.jpg" alt="Riker chipboard display" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712542_scaled_512x378.jpg" alt="Riker display with coins" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101713358_scaled_416x251.jpg" alt="Lucite box case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712540_scaled_512x383.jpg" alt="Riker display with arrowheads" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101713006_scaled_160x170.png" alt="Lucite stands" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="gallery-panel" id="panel-wood">
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710579_scaled_339x240.jpg" alt="Wooden display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710844_scaled_448x289.jpg" alt="Wooden display case open" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710864_scaled_448x343.jpg" alt="Walnut display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101710966.jpg" alt="Cherry display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711005_scaled_480x360.jpg" alt="Oak display case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711162.jpg" alt="Sword display case" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="gallery-panel" id="panel-aluminum">
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711804_scaled_351x246.png" alt="Aluminum display" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711767_scaled_163x295.png" alt="Tall aluminum case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711714_scaled_332x141.png" alt="Aluminum case horizontal" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711830_scaled_181x137.jpg" alt="Aluminum case detail" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711848_scaled_173x135.jpg" alt="Aluminum case lock" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101711162.jpg" alt="Display case" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="gallery-panel" id="panel-riker">
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712092_scaled_256x191.jpg" alt="Riker chipboard" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712179_scaled_544x408.jpg" alt="Riker display" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712542_scaled_512x378.jpg" alt="Riker with items" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712540_scaled_512x383.jpg" alt="Riker with collectibles" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712541_scaled_512x382.jpg" alt="Riker with inserts" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712721_scaled_512x400.jpg" alt="Riker chipboard display" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="gallery-panel" id="panel-lucite">
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712935_scaled_343x147.jpg" alt="Lucite easels" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712953_scaled_253x112.jpg" alt="Lucite stands" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101712985_scaled_273x205.jpg" alt="Lucite display" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/52988334_scaled_298x214.jpg" alt="Lucite case" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101713072_scaled_308x154.jpg" alt="Glass dome" loading="lazy"></div>
+        <div class="gallery-item"><img src="http://www.s-denterprises.com/image/101713358_scaled_416x251.jpg" alt="Lucite box case" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRAFTSMANSHIP -->
+<section id="craftsmanship">
+  <div class="section-inner">
+    <div class="section-header section-header-centered reveal">
+      <span class="section-label">What Sets Us Apart</span>
+      <h2 class="section-title section-title-light">Built Better, By Design</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.55); margin:0 auto;">Every detail in our cases exists for a reason — not just aesthetics, but protection and longevity.</p>
+    </div>
+    <div class="craft-grid">
+      <div class="craft-item reveal d1">
+        <div class="craft-icon-wrap"><svg width="28" height="28"><use href="#i-tree"/></svg></div>
+        <h3>Premium Hardwoods</h3>
+        <p>Genuine cherry, walnut, and oak — selected for grain quality and worked to highlight natural beauty with hand-rubbed satin finish.</p>
+      </div>
+      <div class="craft-item reveal d2">
+        <div class="craft-icon-wrap"><svg width="28" height="28"><use href="#i-shield"/></svg></div>
+        <h3>Security Hardware</h3>
+        <p>Solid brass hinges, brass-plated clasp locks, and tamper-proof keyed cylinder locks ensure your collection stays exactly where you left it.</p>
+      </div>
+      <div class="craft-item reveal d3">
+        <div class="craft-icon-wrap"><svg width="28" height="28"><use href="#i-usa"/></svg></div>
+        <h3>Made in the USA</h3>
+        <p>Every product is handcrafted in Manchester, Ohio. No overseas sourcing, no quality compromises — just American-made craftsmanship.</p>
+      </div>
+      <div class="craft-item reveal d4">
+        <div class="craft-icon-wrap"><svg width="28" height="28"><use href="#i-box"/></svg></div>
+        <h3>Protected Shipping</h3>
+        <p>All products are individually boxed with protective packaging. Your display cases arrive in perfect condition, ready to showcase your pieces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section id="ordering">
+  <div class="section-inner">
+    <div class="section-header section-header-centered reveal">
+      <span class="section-label">How to Order</span>
+      <h2 class="section-title">Getting Your Display Case is Simple</h2>
+      <p class="section-sub">From initial inquiry to delivery, we keep the process stress-free and direct.</p>
+    </div>
+    <div class="ordering-grid">
+      <div class="ordering-step reveal d1">
+        <div class="step-num">1</div>
+        <h3>Browse &amp; Choose</h3>
+        <p>Explore our product lines — wooden, aluminum, riker, or lucite. Filter by size, wood species, or insert type to find your perfect match.</p>
+      </div>
+      <div class="ordering-step reveal d2">
+        <div class="step-num">2</div>
+        <h3>Contact Us Directly</h3>
+        <p>Call or email with your selections. Our team will confirm availability, pricing, and any custom specifications you need.</p>
+      </div>
+      <div class="ordering-step reveal d3">
+        <div class="step-num">3</div>
+        <h3>Custom Options</h3>
+        <p>Need a non-standard size or different velvet color? We offer made-to-order cases — just let us know your requirements.</p>
+      </div>
+      <div class="ordering-step reveal d4">
+        <div class="step-num">4</div>
+        <h3>Ships to Your Door</h3>
+        <p>Every order is individually packaged and shipped with care. Your cases arrive ready to display your most prized possessions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM ORDERS -->
+<section id="custom">
+  <div class="section-inner">
+    <div class="custom-grid">
+      <div class="custom-content reveal">
+        <span class="section-label">Custom &amp; Made-to-Order</span>
+        <h2 class="section-title">Not Finding Exactly What You Need?</h2>
+        <p class="section-sub">If our standard sizes don't fit your collection, we build custom cases to your specifications — at an additional charge, but without the hassle of finding an alternative.</p>
+        <div class="custom-options">
+          <div class="custom-option">
+            <svg width="16" height="16"><use href="#i-check"/></svg>
+            <div>
+              <div class="custom-option-label">Custom Sizes</div>
+              <div class="custom-option-note">Non-standard dimensions built to order</div>
+            </div>
+          </div>
+          <div class="custom-option">
+            <svg width="16" height="16"><use href="#i-check"/></svg>
+            <div>
+              <div class="custom-option-label">Velvet Colors</div>
+              <div class="custom-option-note">Red, blue, black &amp; green foam velveteen</div>
+            </div>
+          </div>
+          <div class="custom-option">
+            <svg width="16" height="16"><use href="#i-check"/></svg>
+            <div>
+              <div class="custom-option-label">Wood Species</div>
+              <div class="custom-option-note">Cherry, walnut, or oak — your choice</div>
+            </div>
+          </div>
+          <div class="custom-option">
+            <svg width="16" height="16"><use href="#i-check"/></svg>
+            <div>
+              <div class="custom-option-label">Optional Feet</div>
+              <div class="custom-option-note">Cherry, walnut &amp; oak feet for standing cases</div>
+            </div>
+          </div>
+          <div class="custom-option">
+            <svg width="16" height="16"><use href="#i-check"/></svg>
+            <div>
+              <div class="custom-option-label">Insert Systems</div>
+              <div class="custom-option-note">Custom slot counts for riker chipboards</div>
+            </div>
+          </div>
+          <div class="custom-option">
+            <svg width="16" height="16"><use href="#i-check"/></svg>
+            <div>
+              <div class="custom-option-label">Deluxe Bottoms</div>
+              <div class="custom-option-note">Red, blue, black, green or burgundy</div>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16"><use href="#i-mail"/></svg>
+          Inquire About Custom Orders
+        </a>
+      </div>
+      <div class="custom-image-stack rr">
+        <img class="custom-img-a"
+          src="http://www.s-denterprises.com/image/101711005_scaled_480x360.jpg"
+          alt="Custom display case" loading="lazy">
+        <img class="custom-img-b"
+          src="http://www.s-denterprises.com/image/101712722_scaled_512x384.jpg"
+          alt="Riker display detail" loading="lazy">
+        <img class="custom-img-c"
+          src="http://www.s-denterprises.com/image/101713180_scaled_280x243.jpg"
+          alt="Lucite stand" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-header section-header-centered reveal">
+      <span class="section-label">Frequently Asked Questions</span>
+      <h2 class="section-title">Common Questions, Honest Answers</h2>
+      <p class="section-sub">Still not sure? Here are answers to the questions we hear most often.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-question">
+          What types of collectibles are your display cases suited for?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">Our cases are used for an enormous variety of collectibles — knives, swords, coins, arrowheads, medals, military memorabilia, jewelry, arrowheads, firearms accessories, and more. If you're not sure which case fits your items, call us and we'll help you find the right fit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I order a case in a size that isn't listed?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">Yes. We offer made-to-order, non-stock cases for an additional charge. Contact us with your exact dimensions and we'll let you know what's possible and the timeline involved. This applies to both our wooden cases and custom insert configurations.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What wood species are your cases available in?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">Our wooden display cases come in three solid hardwoods: cherry, walnut, and oak. Each is finished with a grain-enhancing, hand-rubbed satin finish that highlights the natural beauty of the wood. Optional hardwood feet are available in matching species.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I replace or change the velvet inlay color?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">Absolutely. Replacement color velvet inserts with foam backing are available separately for all major case series. Colors include black, blue, red, and green. If you want a non-standard color at time of order, let us know and we'll arrange it for an additional charge.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How are the cases shipped, and is the glass protected?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">Every case is individually boxed with protective packaging specifically designed for our products. We use tempered safety glass in our aluminum cases and take great care to ensure everything arrives intact. If you receive a damaged item, contact us immediately and we'll make it right.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you sell the Winchester Trademark knives and John Primble knives individually?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">Yes — through our Blue Grass Cutlery division, we carry authentic Winchester Trademark knives and John Primble knives. These are collector-grade American cutlery pieces. Contact us directly for current inventory and pricing on available models.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I place an order?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">The easiest way is to call us at (937) 549-3902 or email us at sales@s-denterprises.com. We'll discuss what you need, confirm availability and pricing, and walk you through the order process directly. There's no automated system here — just real people who know their products.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What is your return policy?
+          <svg width="16" height="16"><use href="#i-chevron"/></svg>
+        </div>
+        <div class="faq-answer">We stand behind the quality of our products. If there is a defect or damage from shipping, contact us right away and we will work with you to resolve the issue. Please review our full return policy on our website or ask us directly when placing your order.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="section-inner">
+    <h2>Ready to Display What Matters?</h2>
+    <p>Handcrafted cases. Honest pricing. American made.</p>
+    <a href="tel:9375493902" class="cta-band-phone">(937) 549-3902</a>
+    <a href="mailto:sales@s-denterprises.com" class="cta-band-email">sales@s-denterprises.com</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title section-title-light">We're Here to Help You Find the Right Case</h2>
+        <p class="section-sub">Whether you need a standard display case or something completely custom, our team is ready to talk through your options — no pressure, no automated menus.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="18" height="18"><use href="#i-phone"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Phone</div>
+            <div class="contact-detail-value"><a href="tel:9375493902">(937) 549-3902</a></div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="18" height="18"><use href="#i-fax"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Fax</div>
+            <div class="contact-detail-value">(937) 549-2709</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="18" height="18"><use href="#i-mail"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-value"><a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg width="18" height="18"><use href="#i-pin"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Address</div>
+            <div class="contact-detail-value">20 E 7th Street<br>Manchester, OH 45144-1308</div>
+          </div>
+        </div>
+
+        <div class="hours-table">
+          <div class="hours-table-title">Business Hours</div>
+          <div class="hours-row"><strong>Monday – Friday</strong><span>8:00 AM – 5:00 PM</span></div>
+          <div class="hours-row"><strong>Saturday</strong><span>By Appointment</span></div>
+          <div class="hours-row"><strong>Sunday</strong><span>Closed</span></div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal d2">
+        <h3>Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(555) 000-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@email.com">
+        </div>
+        <div class="form-group">
+          <label>Product Interest</label>
+          <select>
+            <option value="">Select a product category…</option>
+            <option>Wooden Display Cases (Cherry / Walnut / Oak)</option>
+            <option>Aluminum Display Cases</option>
+            <option>Riker-Type Black Chipboards</option>
+            <option>Lucite Displays &amp; Accessories</option>
+            <option>Custom / Made-to-Order Case</option>
+            <option>Blue Grass Cutlery (Winchester / John Primble)</option>
+            <option>Replacement Velvet Inserts</option>
+            <option>Other / General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Describe what you're looking for — size, quantity, special requirements, etc."></textarea>
+        </div>
+        <button class="form-submit" type="button">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-brand-logo">
+          <div class="footer-brand-mark">S&D</div>
+          <span class="footer-brand-name">S &amp; D &amp; T Enterprises, INC.</span>
+        </a>
+        <p class="footer-tagline">Handcrafted display cases made in the USA — trusted by collectors, dealers, and enthusiasts since the early 1970s.</p>
+        <div class="footer-contact-line"><svg width="13" height="13"><use href="#i-phone"/></svg><a href="tel:9375493902">(937) 549-3902</a></div>
+        <div class="footer-contact-line"><svg width="13" height="13"><use href="#i-mail"/></svg><a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></div>
+        <div class="footer-contact-line"><svg width="13" height="13"><use href="#i-pin"/></svg>20 E 7th St, Manchester, OH 45144</div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul class="footer-links">
+          <li><a href="#products">Wooden Display Cases</a></li>
+          <li><a href="#products">Aluminum Cases</a></li>
+          <li><a href="#products">Riker-Type Chipboards</a></li>
+          <li><a href="#products">Lucite Displays</a></li>
+          <li><a href="#custom">Custom Orders</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Divisions</h4>
+        <ul class="footer-links">
+          <li><a href="#divisions">Allstate Manufacturing</a></li>
+          <li><a href="#divisions">Ruddles Mills Products</a></li>
+          <li><a href="#divisions">Blue Grass Cutlery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="http://www.s-denterprises.com/returnpolicy.html">Return Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 S &amp; D &amp; T Enterprises, INC. — Manchester, Ohio. All rights reserved.</p>
+      <p class="footer-made"><svg width="12" height="12"><use href="#i-heart"/></svg> Handcrafted in the USA</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ─────────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal, .rl, .rr');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+revealEls.forEach(el => io.observe(el));
+
+// ── ANIMATED COUNTERS ─────────────────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.dataset.count);
+  const duration = 1800;
+  const start = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const val = Math.round(progress * target);
+    el.textContent = val + (target === 3 ? '' : '+');
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+const counterEls = document.querySelectorAll('[data-count]');
+const counterIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterIO.unobserve(e.target); } });
+}, { threshold: 0.5 });
+counterEls.forEach(el => counterIO.observe(el));
+
+// ── FAQ ACCORDION ─────────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// ── GALLERY TABS ──────────────────────────────────────────
+document.querySelectorAll('.gallery-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.gallery-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+  });
+});
+
+// ── STICKY NAV SHADOW ─────────────────────────────────────
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 10 ? '0 4px 30px rgba(26,16,8,0.3)' : '0 2px 20px rgba(26,16,8,0.18)';
+});
+</script>
+</body>
+</html>
